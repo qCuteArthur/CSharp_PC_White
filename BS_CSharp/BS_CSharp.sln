@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS_声明自定义事件", "BS_CSharp\BS_声明自定义事件.csproj", "{02CAF341-E224-46C1-A1E3-8B91ACA393F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS_事件，简略声明", "BS_事件，简略声明\BS_事件，简略声明.csproj", "{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02CAF341-E224-46C1-A1E3-8B91ACA393F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CAF341-E224-46C1-A1E3-8B91ACA393F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CAF341-E224-46C1-A1E3-8B91ACA393F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02CAF341-E224-46C1-A1E3-8B91ACA393F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73A2AFB0-0611-472F-84D8-B92B22EFB87B}
+	EndGlobalSection
+EndGlobal

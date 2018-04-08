@@ -1,0 +1,7 @@
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\bin\Debug\BS_CSharp.exe.config
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\bin\Debug\BS_CSharp.exe
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\bin\Debug\BS_CSharp.pdb
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\obj\Debug\BS_声明自定义事件.csprojResolveAssemblyReference.cache
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\obj\Debug\BS_声明自定义事件.csproj.CoreCompileInputs.cache
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\obj\Debug\BS_CSharp.exe
+C:\Users\ren\source\repos\BS_CSharp\BS_CSharp\obj\Debug\BS_CSharp.pdb
