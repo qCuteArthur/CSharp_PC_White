@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}</ProjectGuid>
+    <ProjectGuid>{59C6E485-EFD5-428B-AC76-79044E3FF5ED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BS_事件_简略声明</RootNamespace>
-    <AssemblyName>BS_事件，简略声明</AssemblyName>
+    <RootNamespace>BS_LINQ</RootNamespace>
+    <AssemblyName>BS_LINQ</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BS_CSharp\BS_声明自定义事件.csproj">
-      <Project>{02CAF341-E224-46C1-A1E3-8B91ACA393F4}</Project>
-      <Name>BS_声明自定义事件</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

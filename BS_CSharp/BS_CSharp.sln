@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS_声明自定义事件", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS_事件，简略声明", "BS_事件，简略声明\BS_事件，简略声明.csproj", "{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BS_LINQ委托Lambda表达式", "BS_LINQ\BS_LINQ委托Lambda表达式.csproj", "{59C6E485-EFD5-428B-AC76-79044E3FF5ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C5FEACF-C082-4EA9-ACDE-22AADC39550E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C6E485-EFD5-428B-AC76-79044E3FF5ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C6E485-EFD5-428B-AC76-79044E3FF5ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C6E485-EFD5-428B-AC76-79044E3FF5ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C6E485-EFD5-428B-AC76-79044E3FF5ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

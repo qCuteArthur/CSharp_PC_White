@@ -1,0 +1,11 @@
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_事件，简略声明.exe.config
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_事件，简略声明.exe
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_事件，简略声明.pdb
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_CSharp.exe
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_CSharp.pdb
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\bin\Debug\BS_CSharp.exe.config
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\obj\Debug\BS_事件，简略声明.csprojResolveAssemblyReference.cache
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\obj\Debug\BS_事件，简略声明.csproj.CoreCompileInputs.cache
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\obj\Debug\BS_事件，简略声明.csproj.CopyComplete
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\obj\Debug\BS_事件，简略声明.exe
+C:\Users\ren\source\repos\BS_CSharp\BS_事件，简略声明\obj\Debug\BS_事件，简略声明.pdb
