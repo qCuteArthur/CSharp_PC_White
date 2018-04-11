@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W6_伟大的软件", "上课笔记\W6_伟大的软件.csproj", "{B99A94A6-B203-419E-8CFE-576DAF83E0B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindGuitarTester_version1", "..\FindGuitarTester_version1\FindGuitarTester_version1\FindGuitarTester_version1\FindGuitarTester_version1.csproj", "{FDD4DFFA-5438-484D-8B38-892FA9364A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindGuitarTester_version2", "..\FindGuitarTester_version2-2\FindGuitarTester_version2-2\FindGuitarTester_version2\FindGuitarTester_version2.csproj", "{6B178B48-3E85-4B31-90DF-A4E7B2E10878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindGuitarTester_version2", "..\FindGuitarTester_version3\FindGuitarTester_version3\FindGuitarTester_version2\FindGuitarTester_version2.csproj", "{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B99A94A6-B203-419E-8CFE-576DAF83E0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99A94A6-B203-419E-8CFE-576DAF83E0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99A94A6-B203-419E-8CFE-576DAF83E0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99A94A6-B203-419E-8CFE-576DAF83E0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD4DFFA-5438-484D-8B38-892FA9364A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD4DFFA-5438-484D-8B38-892FA9364A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD4DFFA-5438-484D-8B38-892FA9364A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD4DFFA-5438-484D-8B38-892FA9364A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BE3E04C-DD1A-4AF1-9D34-DAB29DAD04DE}
+	EndGlobalSection
+EndGlobal

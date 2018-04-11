@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FindGuitarTester_version2.Guitar">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQEAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAEA=</HashCode>
+      <FileName>Guitar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FindGuitarTester_version2.Inventory">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FindGuitarTester_version2.GuitarSpec">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAgAAAAJBAAAIQwAAAAIAAA=</HashCode>
+      <FileName>GuitarSpec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FindGuitarTester_version2.Wood_Enum">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAMAAACEAIABAAAAAAAAAAAAAAAAAAgAABAAAAA=</HashCode>
+      <FileName>Wood.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FindGuitarTester_version2.Type_Enum">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Type.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FindGuitarTester_version2.Builder_Enum">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAEAIAAAAAkAAAAACAAAAAEAAAg=</HashCode>
+      <FileName>Builder.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

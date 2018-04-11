@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4", "leetcode_white\4.csproj", "{46E70055-B4FA-4918-84D0-1CD16D285CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11 Container with most water", "11\11 Container with most water.csproj", "{DE7AE68D-A479-414B-BFC6-8AB3479D70DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Containers with most water 动态规划", "11_Containers with most water 动态规划\11_Containers with most water 动态规划.csproj", "{ABDC8EDD-6AAC-4A2A-8F07-8AF9A017D755}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46E70055-B4FA-4918-84D0-1CD16D285CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E70055-B4FA-4918-84D0-1CD16D285CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E70055-B4FA-4918-84D0-1CD16D285CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E70055-B4FA-4918-84D0-1CD16D285CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7AE68D-A479-414B-BFC6-8AB3479D70DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7AE68D-A479-414B-BFC6-8AB3479D70DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7AE68D-A479-414B-BFC6-8AB3479D70DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7AE68D-A479-414B-BFC6-8AB3479D70DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDC8EDD-6AAC-4A2A-8F07-8AF9A017D755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDC8EDD-6AAC-4A2A-8F07-8AF9A017D755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDC8EDD-6AAC-4A2A-8F07-8AF9A017D755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDC8EDD-6AAC-4A2A-8F07-8AF9A017D755}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21B49BF3-CF3A-4A7F-846D-5320A447D55F}
+	EndGlobalSection
+EndGlobal
