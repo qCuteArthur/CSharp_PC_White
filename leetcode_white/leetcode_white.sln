@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "leetcode数组专项", "lee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum0412", "TwoSum0412\TwoSum0412.csproj", "{442396F9-4A5B-4A29-9EF3-743A6C55555A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tsts", "tsts\tsts.csproj", "{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -185,6 +187,18 @@ Global
 		{442396F9-4A5B-4A29-9EF3-743A6C55555A}.Release|x64.Build.0 = Release|Any CPU
 		{442396F9-4A5B-4A29-9EF3-743A6C55555A}.Release|x86.ActiveCfg = Release|Any CPU
 		{442396F9-4A5B-4A29-9EF3-743A6C55555A}.Release|x86.Build.0 = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|x64.Build.0 = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|x64.ActiveCfg = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|x64.Build.0 = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{147F0518-9843-4E75-9DA6-0D8E84B8C4E9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
