@@ -10,18 +10,40 @@ namespace 删除K个数字
     {
         static void Main(string[] args)
         {
-            Solution2 solution2 = new Solution2();
-            string nums = "1432219";
-            int k = 3;
+            Solution solution2 = new Solution();
+            //string nums = "1432219";
+            //int k = 3;
+
+            //string nums = "10200";
+            //int k = 1;
+
+            //string nums = "9";
+            //int k = 1;
+
+            //string nums = "112";
+            //int k = 1;
+
+            //string nums = "10";
+            //int k = 1;
+
+            //string nums = "1111111";
+            //int k = 3;
+
+            string nums = "1234567890";
+            int k = 9;
+
+            //对于12345，但是必须要删除一个元素的情况。对于贪心不用更改，但是剩余的部分要增加判断条件。
             string myNum = solution2.RemoveKdigits(nums, k);
             Console.WriteLine(myNum);
             Console.ReadLine();
         }
     }
 
+    //2018年4月16日13:17:06
+    //我觉得目前代码的逻辑过于复杂，无法有效操作
 
 
-    public class Solution
+    public class Solution2
     {
         public string RemoveKdigits(string num, int k)
         {
@@ -78,54 +100,132 @@ namespace 删除K个数字
         }
     }
 
-    public class Solution2
+    public class Solution
     {
         public string RemoveKdigits(string num, int k)
         {
+            //首先判断是不是空的
+            if (num.Length == 0 || num.Length<=k)
+            {
+                return "0";
+            }
+            //创建一个Stack来应该输出的东西，我们这个算法是只增加输出的元素。
             Stack<int> tempStack = new Stack<int>();
-            const int BEGIN = 0;
-            const int USUAL = 1;
-            int STATE = BEGIN;
-            int cts =0;
-            //尽可能保留小的元素，当你4想进来，先和1比较，比1大，进来，让你3想进来，比4小，4出去，3进来，当你2进来，比3小，2进来3出去，当你进来8,8比2大，8进来。
-
-            //2018年4月16日04:11:09
-            //首先把数字保存在数组中会比较好，因为你需要比较这个元素和下一个元素。
-            //真的要用数组吗？用Stack不行么？
-
+            //对于删除的元素的个数计数，统计还可以继续删除的元素的个数
+            int cts = k;
+            //如果当前字符串比栈顶元素小，并且还可以继续删除元素，那么就将栈顶元素删掉，这样可以保证将当前元素加进去一定可以得到一个较小的序列．也可以算是一个贪心思想．最后我们只取前len - k个元素构成一个序列即可，如果这样得到的是一个空串那就手动返回０．还有一个需要注意的是字符串首字符不为０
+            int LeftNumber = num.Length;
             foreach (var item in num)
             {
-                if (cts == k)
+                if (tempStack.Count() == 0)
+                {
+                    tempStack.Push(item - 48);
+                }
+                //一开始剩余元素肯定是比你要删除的元素个数多，等到后来，会有一个时间节点，剩余元素跟删除的元素个数一样多。这个时候，全部删除，直接break应对123456这种情况。但是不包括210这种情况
+                else if (LeftNumber == cts &&  tempStack.Peek()<=(item-48))
                 {
                     break;
                 }
-                switch (STATE)
+                //如果还可以继续删除元素，并且栈顶的元素大于当前的元素，就删除栈顶的元素，然后把当前的元素push进去。
+                else if (cts > 0 && tempStack.Peek() > (item - 48))
                 {
-                    case BEGIN:
-                        tempStack.Push(item - 48);
-                        STATE = USUAL;
-                        break;
-                    case USUAL:
-                        int TopNumber = tempStack.Pop();
-                        if (TopNumber > item - 48)
-                        {
-                            tempStack.Push(TopNumber);
-                            cts++;
-                        }
-                        else
-                        {
-                            tempStack.Push(item-48);
-                        }
-                        break;
+                    tempStack.Pop();
+                    tempStack.Push(item - 48);
+                    cts--;
+                    //已经做了一次元素的删除
                 }
+                else if (tempStack.Peek() <= (item - 48) || cts==0)
+                {
+                    tempStack.Push(item - 48);
+                }
+                LeftNumber--;
             }
-            int retNumber = 0;
-            foreach (var item in tempStack)
+            Stack<int> retStack = new Stack<int>();
+            while (tempStack.Count != 0)
             {
-                retNumber = retNumber * 10 + item;
+                retStack.Push(tempStack.Pop());
             }
-            return retNumber.ToString();
+
+            string ret = "";
+
+            if (retStack.Peek() == 0)
+            {
+                retStack.Pop();
+            }
+            while (retStack.Count != 0)
+            {
+                ret = ret + retStack.Pop();
+            }
+            if (ret.Length == 0)
+            {
+                ret = "0";
+            }
+            return ret;
         }
     }
 
+    public class Solution3
+    {
+        public string RemoveKdigits(string num, int k)
+        {
+            //首先判断是不是空的
+            if (num.Length == 0 || num.Length <= k)
+            {
+                return "0";
+            }
+            //创建一个Stack来应该输出的东西，我们这个算法是只增加输出的元素。
+            Stack<int> tempStack = new Stack<int>();
+            //对于删除的元素的个数计数，统计还可以继续删除的元素的个数
+            int cts = k;
+            //如果当前字符串比栈顶元素小，并且还可以继续删除元素，那么就将栈顶元素删掉，这样可以保证将当前元素加进去一定可以得到一个较小的序列．也可以算是一个贪心思想．最后我们只取前len - k个元素构成一个序列即可，如果这样得到的是一个空串那就手动返回０．还有一个需要注意的是字符串首字符不为０
+            int LeftNumber = num.Length;
+            foreach (var item in num)
+            {
+                if (tempStack.Count() == 0)
+                {
+                    tempStack.Push(item - 48);
+                }
+                //一开始剩余元素肯定是比你要删除的元素个数多，等到后来，会有一个时间节点，剩余元素跟删除的元素个数一样多。这个时候，全部删除，直接break应对123456这种情况。但是不包括210这种情况
+                else if (LeftNumber == cts && tempStack.Peek() <= (item - 48))
+                {
+                    break;
+                }
+                //如果还可以继续删除元素，并且栈顶的元素大于当前的元素，就删除栈顶的元素，然后把当前的元素push进去。
+                else if (cts > 0 && tempStack.Peek() > (item - 48))
+                {
+                    tempStack.Pop();
+                    tempStack.Push(item - 48);
+                    cts--;
+                    //已经做了一次元素的删除
+                }
+                else if (tempStack.Peek() <= (item - 48) || cts == 0)
+                {
+                    tempStack.Push(item - 48);
+                }
+                LeftNumber--;
+            }
+            Stack<int> retStack = new Stack<int>();
+            while (tempStack.Count != 0)
+            {
+                retStack.Push(tempStack.Pop());
+            }
+
+            string ret = "";
+
+            if (retStack.Peek() == 0)
+            {
+                retStack.Pop();
+            }
+            while (retStack.Count != 0)
+            {
+                ret = ret + retStack.Pop();
+            }
+            if (ret.Length == 0)
+            {
+                ret = "0";
+            }
+            return ret;
+        }
+    }
 }
+
