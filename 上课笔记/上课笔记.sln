@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindGuitarTester_version2",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindGuitarTester_version2", "..\FindGuitarTester_version3\FindGuitarTester_version3\FindGuitarTester_version2\FindGuitarTester_version2.csproj", "{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface_0418A2", "Interface_0418A2\Interface_0418A2.csproj", "{99EF9653-2691-4E06-8C01-20F8EFD26A83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,14 @@ Global
 		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B178B48-3E85-4B31-90DF-A4E7B2E10878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8692EA0D-868E-445B-BF0E-56DB90F3E8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99EF9653-2691-4E06-8C01-20F8EFD26A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EF9653-2691-4E06-8C01-20F8EFD26A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99EF9653-2691-4E06-8C01-20F8EFD26A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99EF9653-2691-4E06-8C01-20F8EFD26A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
