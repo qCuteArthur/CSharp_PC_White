@@ -11,7 +11,7 @@ namespace _56_Jump_Game_II
         static void Main(string[] args)
         {
             int[] nums = { 1, 2, 1, 1, 1 };
-            Solution solution = new Solution();
+            Solution3 solution = new Solution3();
             int ret = solution.Jump(nums);
             Console.WriteLine(ret);
             Console.ReadLine();
@@ -133,28 +133,78 @@ namespace _56_Jump_Game_II
             return StepNum;
         }
     }
-    
+
     //[2,3,5,9,0,9,7,2,7,9,1,7,4,6,2,1,0,0,1,4,9,0,6,3] 这种问题很难处理。。。。。
 
     //处理12111问题
     //最大是3，我们返回的是4
 
-    public class Solution3
+
+
+        //成功的4号方案，
+    public class Solution4
     {
-        public int Step(int[]nums)
+        public int Jump(int[] nums)
         {
-            int[] level = new int[nums.Length];
-            level[0] = 1;
-            int CurrentPosition = 1;
-            int LevelMax = level[0];
-            while (CurrentPosition < nums.Length)
+            if (nums.Length < 2)
             {
-                for(int i = CurrentPosition; i < nums[CurrentPosition]; i++)
-                {
-                    LevelMax = 
-                }
+                return 0;
             }
-            return level[nums.Length - 1];
+
+            int StepNum = 0;
+            //统一的用绝对位置进行标注
+            int CurrentIndex = 0;
+
+            int MinIndex = 1 + CurrentIndex;
+            int MaxIndex = nums[CurrentIndex] + CurrentIndex;
+
+            int NextIndex = MinIndex;
+            int NextMax = nums[MinIndex] + MinIndex;
+            //可以获得的最小的Index和最大的Index
+            //nums.Length-1是最后一个index
+
+            //处理不了出现0的问题。因为出现0之后，MinRange和MaxRange会相互冲突
+            while (CurrentIndex < nums.Length - 1)
+            {
+                if (MaxIndex >= nums.Length - 1)
+                {
+                    StepNum++;
+                    return StepNum;
+                }
+                for (int i = MinIndex; i <= MaxIndex; i++)
+                {
+                    if (NextMax < nums[i] + i)
+                    {
+                        NextMax = nums[i] + i;
+                        NextIndex = i;
+                    }
+                    //走原来的那一步和走新的这一步，其实最后的步数和到达的Edge都是一样的位置。
+                    else if (NextMax >= nums[i] + i)
+                    {
+                        continue;
+                    }
+                }
+                StepNum++;
+                //在找到最大的之后，就是直接将NextIndex进行赋值操作。
+                CurrentIndex = NextIndex;
+                //CurrentIndex的下一个就是nums.Length-1
+                if (CurrentIndex == nums.Length - 2)
+                {
+                    StepNum++;
+                    return StepNum;
+                }
+                else if (CurrentIndex >= nums.Length - 1)
+                {
+                    return StepNum;
+                }
+                MinIndex = CurrentIndex + 1;
+                MaxIndex = CurrentIndex + nums[CurrentIndex];
+
+                NextIndex = MinIndex;
+                NextMax = nums[MinIndex] + MinIndex;
+            }
+            return StepNum;
         }
     }
+    //现在的问题就是为什么会出现越界的情况1？
 }
