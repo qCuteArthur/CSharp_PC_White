@@ -22,10 +22,25 @@ namespace 第七周作业
 
             inventoy.AddInstruments(new Piano("000005", 500.00, Style_Enum.A, new PianoSpec(Model_Enum.A, Builder_Enum.ANY, Type_Enum.ACOUSTIC, Wood_Enum.ADIRONDACK, Wood_Enum.ADIRONDACK, Style_Enum.A)));
 
-            inventoy.DispInstruments();
+            //inventoy.DispInstruments();
 
             GuitarSpec whatErinLikes = new GuitarSpec(Model_Enum.A,Builder_Enum.ANY,Type_Enum.ACOUSTIC,Wood_Enum.ADIRONDACK,Wood_Enum.ADIRONDACK,String_Enum.eighteen);
 
+            List<InstrumentsSpec> myList  = inventoy.Seach(whatErinLikes);
+            foreach(var item in myList){
+                Console.WriteLine("Model:{0},\nType:{1},\nBackWood:{2},\nTopWood:{3},\n,Builder:{4},\nType:{5},\n", item.Model, item.Type, item.BackWood, item.TopWood, item.Builder, item.Type);
+                if (item is GuitarSpec)
+                {
+                    GuitarSpec guitarSpec = item as GuitarSpec;
+                    Console.WriteLine(guitarSpec.NumString);
+                }
+                else
+                {
+                    PianoSpec pianoSpec = item as PianoSpec;
+                    Console.WriteLine(pianoSpec.Style);
+                }
+                Console.WriteLine("___________________");
+            }
             Console.ReadLine();
         }
     }
@@ -52,7 +67,7 @@ namespace 第七周作业
     {
         void AddInstruments(Instruments instruments);
         void DispInstruments();
-        bool Seach(InstrumensSpec instrumensSpec);
+        List<InstrumentsSpec> Seach(InstrumentsSpec instrumensSpec);
 }
     public class Inventoy : IInventory
     {
@@ -73,7 +88,7 @@ namespace 第七周作业
                 
                 Console.WriteLine("The SerialNumber :{0},\nThe Price {1},\n",item.SerialNumber,item.Price);
 
-                InstrumensSpec instrumensSpec = item.InstrumensSpec as InstrumensSpec;
+                InstrumentsSpec instrumensSpec = item.InstrumensSpec as InstrumentsSpec;
 
                 Console.WriteLine("Model:{0},\nType:{1},\nBackWood:{2},\nTopWood:{3},\n,Builder:{4},\nType:{5},\n", instrumensSpec.Model, instrumensSpec.Type,instrumensSpec.BackWood, instrumensSpec.TopWood,instrumensSpec.Builder,instrumensSpec.Type);
 
@@ -91,13 +106,14 @@ namespace 第七周作业
             }
         }
 
-        public bool Seach(InstrumensSpec m_instrumensSpec)
+        public List<InstrumentsSpec> Seach(InstrumentsSpec m_instrumensSpec)
         {
+            List<InstrumentsSpec> myList = new List<InstrumentsSpec>();
             foreach (var item in Instruments_List)
             {
                 if (!Match(item.InstrumensSpec, m_instrumensSpec))
                 {
-                    return false;
+                    continue;      
                 }
                 //首先进行类型的转换，然后判断是不是可以进行匹配
 
@@ -105,15 +121,19 @@ namespace 第七周作业
                 {
                     GuitarSpec guitarSpec = item.InstrumensSpec as GuitarSpec;
                     GuitarSpec m_guitarSpec = m_instrumensSpec as GuitarSpec;
-                    if (m_guitarSpec.NumString == guitarSpec.NumString) return true;
+                    //如果说这个类型是一致的，所以对比一下二者的NumString属性
+                    if (m_guitarSpec.NumString == guitarSpec.NumString) myList.Add(guitarSpec);
                 }
                 else if (m_instrumensSpec is PianoSpec && item.InstrumensSpec is PianoSpec)
                 {
                     PianoSpec pianoSpec = item.InstrumensSpec as PianoSpec;
+                    PianoSpec m_pianoSpec = m_instrumensSpec as PianoSpec;
+                    if (m_pianoSpec.Style == pianoSpec.Style) myList.Add(pianoSpec);
                 }
             }
+            return myList;
         }
-        public bool Match(InstrumensSpec instrumensSpec1,InstrumensSpec instrumensSpec2)
+        public bool Match(InstrumentsSpec instrumensSpec1,InstrumentsSpec instrumensSpec2)
         {
             if(instrumensSpec1.BackWood != instrumensSpec2.BackWood) return false;
             if (instrumensSpec2.Builder != instrumensSpec1.Builder) return false;
@@ -122,9 +142,8 @@ namespace 第七周作业
             if (instrumensSpec2.Type != instrumensSpec1.Type) return false;
             return true;
         }
-
     }
-    public class InstrumensSpec : IInstrumentSpec
+    public class InstrumentsSpec : IInstrumentSpec
     {
         private Model_Enum model;
         public Model_Enum Model { get { return model; } }
@@ -136,7 +155,7 @@ namespace 第七周作业
         public Wood_Enum TopWood { get { return topWood; } }
         private Wood_Enum backWood;
         public Wood_Enum BackWood { get { return backWood; } }
-        public InstrumensSpec(Model_Enum model,Builder_Enum builder,Type_Enum type,Wood_Enum topWood,Wood_Enum backWood)
+        public InstrumentsSpec(Model_Enum model,Builder_Enum builder,Type_Enum type,Wood_Enum topWood,Wood_Enum backWood)
         {
             this.model = model;
             this.builder = builder;
@@ -151,12 +170,12 @@ namespace 第七周作业
         public string SerialNumber { get { return serialNumber; }}
         private double price;
         public double Price { get { return price; }}
-        private InstrumensSpec instrumensSpec;
-        public InstrumensSpec InstrumensSpec
+        private InstrumentsSpec instrumensSpec;
+        public InstrumentsSpec InstrumensSpec
         {
             get { return instrumensSpec; }
         }
-        public Instruments(string serialNumber,double price,InstrumensSpec instrumensSpec)
+        public Instruments(string serialNumber,double price,InstrumentsSpec instrumensSpec)
         {
             this.instrumensSpec = instrumensSpec;
             this.price = price;
@@ -165,17 +184,17 @@ namespace 第七周作业
     }
     public class Piano :Instruments
     {
-        public Piano(string serialNumber, double price, Style_Enum a, InstrumensSpec instrumensSpec) : base(serialNumber, price, instrumensSpec)
+        public Piano(string serialNumber, double price, Style_Enum a, InstrumentsSpec instrumensSpec) : base(serialNumber, price, instrumensSpec)
         {
         }
     }
     public class Guitar : Instruments
     {
-        public Guitar(string serialNumber, double price, String_Enum numString,InstrumensSpec instrumensSpec) :base(serialNumber,price,instrumensSpec)
+        public Guitar(string serialNumber, double price, String_Enum numString,InstrumentsSpec instrumensSpec) :base(serialNumber,price,instrumensSpec)
         {
         }
     }
-    public class GuitarSpec : InstrumensSpec
+    public class GuitarSpec : InstrumentsSpec
     {
         private String_Enum numString;
         public String_Enum NumString { get { return numString; } }
@@ -184,7 +203,7 @@ namespace 第七周作业
             this.numString = numString;
         }
     }
-    public class PianoSpec : InstrumensSpec
+    public class PianoSpec : InstrumentsSpec
     {
         private Style_Enum style;
         public Style_Enum Style { get { return style; } }
