@@ -127,7 +127,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BinaryTree", "BinaryTree", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "根据任意数组创建二叉树", "根据任意数组创建二叉树\根据任意数组创建二叉树.csproj", "{ED8B6BF6-5D72-49FC-A891-EBEE755D2F82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "创建二叉查找树", "创建二叉查找树\创建二叉查找树.csproj", "{88D91552-468A-4BCF-B5A0-7D502495232A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "创建二叉查找树", "创建二叉查找树\创建二叉查找树.csproj", "{88D91552-468A-4BCF-B5A0-7D502495232A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "根据中序和后序遍历的结果创建二叉树", "根据中序和后序遍历的结果创建二叉树\根据中序和后序遍历的结果创建二叉树.csproj", "{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -727,6 +729,18 @@ Global
 		{88D91552-468A-4BCF-B5A0-7D502495232A}.Release|x64.Build.0 = Release|Any CPU
 		{88D91552-468A-4BCF-B5A0-7D502495232A}.Release|x86.ActiveCfg = Release|Any CPU
 		{88D91552-468A-4BCF-B5A0-7D502495232A}.Release|x86.Build.0 = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|x64.Build.0 = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|x64.ActiveCfg = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|x64.Build.0 = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -780,6 +794,7 @@ Global
 		{3875D2B7-3EC1-41E9-B621-4281D94A19DA} = {4690315E-93A0-47B4-8CB5-D36DACB8D563}
 		{ED8B6BF6-5D72-49FC-A891-EBEE755D2F82} = {4690315E-93A0-47B4-8CB5-D36DACB8D563}
 		{88D91552-468A-4BCF-B5A0-7D502495232A} = {4690315E-93A0-47B4-8CB5-D36DACB8D563}
+		{9A2DCC9F-FABB-42D0-9AC2-9B84A80A6D1E} = {4690315E-93A0-47B4-8CB5-D36DACB8D563}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21B49BF3-CF3A-4A7F-846D-5320A447D55F}
