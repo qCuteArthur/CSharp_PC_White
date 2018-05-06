@@ -12,6 +12,10 @@ namespace _60_permutation_sequence
         {
             Solution solution = new Solution();
             solution.GetPermutation(3,3);
+
+            string s = "juwf";
+            s.ToArray();
+            Console.ReadLine();
             
 
         }
